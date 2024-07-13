@@ -1,0 +1,101 @@
+# Site Settings
+name: Cookbook
+title: Cookbook
+description: Personal Cookbook.
+url: https://cookbook.jaimedearcos.com/
+tags:
+  - meals
+  - deserts
+  - appetizer
+
+home:
+  show_hero: false
+  show_tags: false
+  show_dates: false
+  show_description: false
+
+menu:
+  - title: Recipes
+    url: /
+email: jaime.dearcos@gmail.com
+#disqus_username: blog-jaimedearcos
+
+
+# Social Media Settings
+# Remove the item if you don't need it
+github_username: JaimeDeArcos
+twitter_username: JaimeDeArcos
+linkedin_username: JaimeDeArcos
+#instagram_username: instagram_username
+#medium_username: medium_username
+#facebook_username: facebook_username
+
+
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: true
+show_modal_on_finish_post: true
+two_columns_layout: true
+
+
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+google_analytics: "G-R80JL8TW1N"
+language: "en"
+categories_folder: category
+sent_message_url: "/contact/message-sent/"
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
+show_get_theme_btn: false
+use_logo: false
+
+# Content paginator
+paginate_content:
+  enabled: true
+  debug: false
+  collections:
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
+
+# SASS
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
+
+# Exclude my node related stuff
+exclude: [
+  'package.json',
+  'package-lock.json',
+  'src',
+  'node_modules',
+  'initpost.sh',
+  'Gemfile',
+  'Gemfile.lock',
+  'gulpfile.js',
+  'README.md'
+]
+
+# Theme
+version: v1.0.3
